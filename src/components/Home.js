@@ -24,7 +24,7 @@ componentDidMount(){
                         <div className="card-content" key={post.id}>
                         <Link to={'/'+ post.id}>
                             <img src={Avatar} alt="That's Me!" />
-                            <span className="card-title">{post.title}</span>
+                            <span className="card-title red-text">{post.title}</span>
                         </Link>
                             <p>{post.body}</p>
                         </div>
