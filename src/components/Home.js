@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-
+import { Link } from 'react-router-dom'
+import Avatar from '../myAvatar.png'
 class Home extends Component {
     state = {
         posts: []
@@ -21,7 +22,10 @@ componentDidMount(){
                 return (
                     <div className="post card" key={post.id}>
                         <div className="card-content" key={post.id}>
+                        <Link to={'/'+ post.id}>
+                            <img src={Avatar} alt="That's Me!" />
                             <span className="card-title">{post.title}</span>
+                        </Link>
                             <p>{post.body}</p>
                         </div>
                     </div>
@@ -31,7 +35,7 @@ componentDidMount(){
             <div className="center">No Posts Yet </div>
         )
         return (
-            <div className="container">
+            <div className="container home">
                 <h1 className="center">Home Page</h1>
                     {postList}  
             </div>
