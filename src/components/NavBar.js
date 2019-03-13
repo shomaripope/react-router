@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Link, NavLink } from "react-router-dom"
+import React from 'react';
+import { Link } from "react-router-dom"
 const NavBar = ()=>{
         return (
             <nav className="nav-wrapper red darken-3">
                 <div className="container">
-                    <a className="brand-logo">Shomari's Page</a>
+                    <a href='/' className="brand-logo">Shomari's Page</a>
                         <ul className="right">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/about">About</Link></li>
